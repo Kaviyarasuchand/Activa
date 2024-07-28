@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <link rel="stylesheet" href="payment.css" type="text/css">
+    <script defer src="payment.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Online Payment</h1>
+
+        <div class="bth-menu">
+            <a href="activa.html">Back to Home</a>
+        </div>
+        
+        <div class="help-menu">
+            <a href="#help">Help</a>
+        </div>
+    </header>      
+    <br><br>
+    <main>
+        <form id="payment-form">
+            <div class="payment-form">
+                <label for="amount" class="amount-label">Enter Amount:</label>
+                <input type="number" id="amount" name="amount" class="amount-input" placeholder="Enter amount here" min="0" step="0.01">
+    
+                <div class="payment-options">
+                    <button class="pay-btn" data-upi="googlepay">
+                        <img src="google.png" alt="Google Pay Logo">
+                    </button>
+                    <button class="pay-btn" data-upi="phonepe">
+                        <img src="phonepay-logo.png" alt="PhonePe Logo">
+                    </button>
+                    <button class="pay-btn" data-upi="paytm">
+                        <img src="paytm.jpeg" alt="Paytm Logo">
+                    </button>
+                </div>
+            </div>
+        </form>
+        <br><br>
+        <section id="google-reviews">
+            <h2>What Our Customers Say</h2>
+            <div id="reviews-container"></div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Replace with your Google Places API key and Place ID
+            const apiKey = 'YOUR_GOOGLE_PLACES_API_KEY';
+            const placeId = 'YOUR_PLACE_ID';
+        
+            fetch(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    const reviews = data.result.reviews;
+                    const reviewsContainer = document.getElementById('reviews-container');
+        
+                    if (reviews) {
+                        reviews.forEach(review => {
+                            const reviewElement = document.createElement('div');
+                            reviewElement.className = 'review';
+                            reviewElement.innerHTML = `
+                                <p><strong>${review.author_name}</strong></p>
+                                <p>${review.text}</p>
+                                <p>Rating: ${review.rating}</p>
+                            `;
+                            reviewsContainer.appendChild(reviewElement);
+                        });
+                    } else {
+                        reviewsContainer.innerHTML = '<p>No reviews found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching Google Reviews:', error);
+                    const reviewsContainer = document.getElementById('reviews-container');
+                    reviewsContainer.innerHTML = '<p>Error fetching reviews. Please try again later.</p>';
+                });
+        });
+        
+    </script>
+</body>
+</html>

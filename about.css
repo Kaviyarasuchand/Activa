@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f0000;
+    /*background: linear-gradient(135deg,#ff8000, #c85411);*/
+    background: rgba(204, 204, 204, 0.5);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #007BFF 3px solid;
+    position: relative; /* Ensure header is positioned relatively */
+    z-index: 10; /* Ensure header is above other elements */
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #0056b3;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.showcase {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #1b0d0d;
+    text-align: center;
+    z-index: 1; /* Lower z-index to keep showcase behind other elements */
+}
+
+.showcase-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('alogo.jpeg') no-repeat center center/cover;
+    z-index: 1; /* Lower z-index to keep showcase-image behind other elements */
+}
+
+.showcase-image.blur {
+    animation: blurBackground 3s ease-in-out forwards;
+    filter: blur(0);
+}
+
+.showcase::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(204, 204, 204, 0.5);
+    z-index: 2;
+}
+
+.showcase h1,
+.showcase p {
+    position: relative;
+    z-index: 3;
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.showcase h1 {
+    font-size: 55px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation-delay: 0.5s;
+}
+
+.showcase p {
+    font-size: 20px;
+    margin: 10px 0 0;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blurBackground {
+    to {
+        filter: blur(5px);
+    }
+}
+
+#main {
+    padding: 20px;
+    margin-top: 20px;
+    background: linear-gradient(135deg,#ff8000, #c85411);
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.dark {
+    padding: 15px;
+    background: #35424a;
+    color: #2fc479;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7fb27d;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(176, 13, 13, 0.2);
+    z-index: 1;
+    animation: fadeIn 0.5s;
+}
+
+.dropdown-content a {
+    color: rgb(184, 65, 65);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #86c911;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
