@@ -26,20 +26,26 @@
     </header>
 
     <nav>
-        <a href="#services">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="#help">Help</a>
-        <div class="dropdown">
-            <a href="#more" class="dropbtn">More</a>
-            <div class="dropdown-content">
-                <a href="#link1">Link 1</a>
-                <a href="#link2">Link 2</a>
-                <a href="#link3">Link 3</a>
+        <div class="menu-bar">
+            <span>What you need, just click on it ➡</span>
+            <div class="three-bars" onclick="toggleMenu()">☰</div>
+        </div>
+        <div class="menu-content" id="menu-content">
+            <a href="#services">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="#help">Help</a>
+            <div class="dropdown">
+                <a href="#more" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a href="#link1">Link 1</a>
+                    <a href="#link2">Link 2</a>
+                    <a href="#link3">Link 3</a>
+                </div>
             </div>
         </div>
     </nav>
-    
+
     <div class="news-ticker">
         <span>✨ Exciting Offer: Get 20% off on all services this month! ✨ | New Service: Online Certificate Verification Now Available! | Join us and experience quality like never before! 🌟</span>
     </div>
@@ -118,5 +124,15 @@
     <footer>
         <p><b>&copy; 2024 Activa Computers. All rights reserved.</b></p>
     </footer>
+    <script>
+        function toggleMenu() {
+            var menuContent = document.getElementById('menu-content');
+            if (menuContent.style.display === 'block') {
+                menuContent.style.display = 'none';
+            } else {
+                menuContent.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
