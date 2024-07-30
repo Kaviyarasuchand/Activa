@@ -2,7 +2,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(45deg, #6dc728, #be3d06);*/ /* Gradient from color1 to color2 */
     color: #020033;
     background-color: rgb(200, 198, 198);
 }
@@ -31,8 +30,8 @@ header {
 }
 
 header img {
-    height: 130px; /* Adjusted logo size */
-    border-radius: 80%; /* Optional: modify to your preference */
+    height: 130px;
+    border-radius: 80%;
     width: 120px;
     margin-left: 40px;
     margin-right: 40px;
@@ -50,7 +49,7 @@ h1 {
     font-size: 2.5em;
     margin: 0;
     color: #ffffff;
-    transition: transform 1s ease; /* Transition for the jump effect */
+    transition: transform 1s ease;
 }
 
 h1:hover {
@@ -77,43 +76,10 @@ h1:hover {
 
 @keyframes colorChange {
     0% {
-        color: rgb(255, 0, 0); /* Red */
-    }
-    8.33% {
-        color: rgb(255, 127, 0); /* Orange */
-    }
-    16.67% {
-        color: rgb(255, 255, 0); /* Yellow */
-    }
-    25% {
-        color: rgb(127, 255, 0); /* Chartreuse */
-    }
-    33.33% {
-        color: rgb(0, 255, 0); /* Green */
-    }
-    41.67% {
-        color: rgb(0, 255, 127); /* Spring Green */
-    }
-    50% {
-        color: rgb(0, 255, 255); /* Cyan */
-    }
-    58.33% {
-        color: rgb(0, 127, 255); /* Azure */
-    }
-    66.67% {
-        color: rgb(0, 0, 255); /* Blue */
-    }
-    75% {
-        color: rgb(127, 0, 255); /* Violet */
-    }
-    83.33% {
-        color: rgb(255, 0, 255); /* Magenta */
-    }
-    91.67% {
-        color: rgb(255, 0, 127); /* Rose */
+        color: rgb(255, 0, 0);
     }
     100% {
-        color: rgb(255, 0, 0); /* Back to Red */
+        color: rgb(255, 0, 0);
     }
 }
 
@@ -151,7 +117,6 @@ nav {
     background-color: #15b300;
     border-radius: 5px;
     padding: 10px 0;
-    
 }
 
 nav a {
@@ -161,7 +126,6 @@ nav a {
     transition: transform 0.3s, color 0.3s;
     padding: 14px 16px;
     border-radius: 5px;
-    float: left;
     display: block;
     text-align: center;
 }
@@ -172,7 +136,6 @@ nav a:hover {
     background-color: white;
 }
 
-/* Dropdown menu styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -241,24 +204,23 @@ nav a:hover {
     }
 }
 
-
 .image-container {
     display: flex;
     justify-content: center;
     padding: 120px;
     background-color: rgb(211, 210, 210);
-    position: relative; /* Ensure positioning for absolute children */
-    overflow: hidden; /* Prevent overflow of images */
+    position: relative;
+    overflow: hidden;
     height: 200px;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 20 px;
-    position: absolute; /* Position absolutely to stack images */
+    border-radius: 20px;
+    position: absolute;
     opacity: 0;
-    animation: zoomInOut 15s infinite; /* 15s is the total duration for all images */
+    animation: zoomInOut 15s infinite;
     object-fit: cover;
 }
 
@@ -281,7 +243,6 @@ nav a:hover {
     }
 }
 
-/* Adjust each image's animation delay */
 .image-container img:nth-child(1) {
     animation-delay: 0s;
 }
@@ -302,9 +263,6 @@ nav a:hover {
     animation-delay: 12s;
 }
 
-/* General body and other styles unchanged */
-
-/* Statement Container Styling */
 .statement-container {
     display: flex;
     justify-content: center;
@@ -328,7 +286,6 @@ nav a:hover {
     height: auto;
 }
 
-/* Columns Layout for Services */
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -338,32 +295,28 @@ nav a:hover {
 }
 
 .column {
-    /*background: linear-gradient(45deg, #c728a7, #be1506);*/
     background-color: rgb(200, 198, 198);
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(20% - 20px); /* Adjust to fit more columns */
+    flex: 1 1 calc(20% - 20px);
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .column img {
-    max-width: 100%; /* Ensures image fits within column width */
+    max-width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
-    max-height: 150px; /* Adjust to ensure images are consistently sized */
+    max-height: 150px;
 }
 
 .column:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
-
-/* Rest of the CSS styles */
-
 
 footer {
     text-align: center;
@@ -372,121 +325,44 @@ footer {
     color: white;
 }
 
-#contact {
-    padding: 60px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2.5em;
-    color: #072f8c;
-}
-
-.contact-info {
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.map-container {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.map-container iframe {
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 10px; /* Ensure enough height for images */
-}
-
-.image-container img {
-    position: absolute;
-    width: 600px;
-    height: 170px;
-    object-fit: cover;
-    opacity: 0;
-    animation: zoom-in-out 30s infinite;
-}
-
-.image-container img:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.image-container img:nth-child(2) {
-    animation-delay: 6s;
-}
-
-.image-container img:nth-child(3) {
-    animation-delay: 12s;
-}
-
-.image-container img:nth-child(4) {
-    animation-delay: 18s;
-}
-
-.image-container img:nth-child(5) {
-    animation-delay: 24s;
-}
-
-@keyframes zoom-in-out {
-    0%, 100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    10%, 20% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-    30%, 70% {
-        transform: scale(1);
-        opacity: 0;
-    }
-    80%, 90%{
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
 @media only screen and (max-width: 600px) {
-    .header {
-        font-size: 14px;
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    header img {
+        margin: 10px 0;
+    }
+
+    nav {
+        display: block;
+        text-align: center;
     }
 
     nav a {
-        float: none;
-        width: 100%;
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .statement-container {
+        flex-direction: column;
+    }
+
+    .statement {
+        margin-bottom: 20px;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
     }
 
     .image-container {
-        height: auto;
-    }
-
-    .image-container img {
-        width: 100%;
+        padding: 60px 20px;
     }
 }
