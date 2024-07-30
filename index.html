@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="A simple responsive webpage.">
-    <meta name="keywords" content="HTML, CSS, responsive design, mobile-friendly">
-    <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activa Computers</title>
     <link rel="stylesheet" href="activa.css" type="text/css">
@@ -26,26 +23,20 @@
     </header>
 
     <nav>
-        <div class="menu-bar">
-            <span>What you need, just click on it ➡</span>
-            <div class="three-bars" onclick="toggleMenu()">☰</div>
-        </div>
-        <div class="menu-content" id="menu-content">
-            <a href="#services">Services</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="#help">Help</a>
-            <div class="dropdown">
-                <a href="#more" class="dropbtn">More</a>
-                <div class="dropdown-content">
-                    <a href="#link1">Link 1</a>
-                    <a href="#link2">Link 2</a>
-                    <a href="#link3">Link 3</a>
-                </div>
+        <a href="#services">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#help">Help</a>
+        <div class="dropdown">
+            <a href="#more" class="dropbtn">More</a>
+            <div class="dropdown-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
             </div>
         </div>
     </nav>
-
+    
     <div class="news-ticker">
         <span>✨ Exciting Offer: Get 20% off on all services this month! ✨ | New Service: Online Certificate Verification Now Available! | Join us and experience quality like never before! 🌟</span>
     </div>
@@ -91,7 +82,7 @@
             <p>Get Income certificates issued quickly with our dedicated service.</p>
         </div>
         <div id="a_certificate" class="column">
-            <img src="obc.jpg" alt="A Certificate">
+            <img src="OBC.jpg" alt="A Certificate">
             <h2>A Certificate</h2>
             <p>Get your A Certificate quickly and easily.</p>
         </div>
@@ -124,15 +115,5 @@
     <footer>
         <p><b>&copy; 2024 Activa Computers. All rights reserved.</b></p>
     </footer>
-    <script>
-        function toggleMenu() {
-            var menuContent = document.getElementById('menu-content');
-            if (menuContent.style.display === 'block') {
-                menuContent.style.display = 'none';
-            } else {
-                menuContent.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 </html>
